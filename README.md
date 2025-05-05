@@ -2,7 +2,7 @@
 
 This repository implements an end-to-end pipeline for predicting fruit quality attributes (Brix, TA, Firmness) from microwave spectral data. It supports flexible preprocessing modes, two model types (Random Forest, 1D CNN).
 
-## 📂 Repository Structure
+##  Repository Structure
 
 ```
 damage_detection_pipeline/
@@ -21,7 +21,7 @@ damage_detection_pipeline/
 └── requirements.txt          # Python dependencies
 ```
 
-## 🚀 Setup
+##  Setup
 
 1. **Clone the repo**
 
@@ -46,7 +46,7 @@ damage_detection_pipeline/
      * Model hyperparameters under `model.random_forest` or `model.oned_cnn`
      * Split ratio under `preprocessing.split`
 
-## 🏃 Running the Pipeline
+##  Running the Pipeline
 
 ### Basic Usage
 
@@ -77,7 +77,7 @@ This will:
   ```
 
 
-## 📈 Outputs
+##  Outputs
 
 * **Console logs**: Training loss per epoch (for CNN), validation MAE/RMSE.
 * **Model artifact**:
