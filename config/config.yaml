@@ -1,0 +1,51 @@
+data:
+  raw_path: data/raw/Assignment_DataScientist_20250502.csv
+
+preprocessing:
+  aggregate: true
+  complex_to: magnitude           # raw, magnitude, magnitude_phase
+  scaler: robust                  # robust or standard
+  feature_mode: all_bands    # all_bands, band_selection, pca_only
+  feature_selection:
+    method: name_list
+    features:
+      - "13.75_GHz"
+      - "1.0_GHz"
+      - "14.0_GHz"
+      - "13.5_GHz"
+      - "0.75_GHz"
+      - "13.25_GHz"
+      - "2.0_GHz"
+      - "1.25_GHz"
+      - "2.25_GHz"
+      - "5.0_GHz"
+  pca:
+    n_components: 2              # only used if feature_mode == pca_only
+  outlier_removal:
+    threshold: 3                 # Z-score threshold on targets
+  split:
+    validation_split: 0.2
+    random_state: 42
+
+model:
+  choice: random_forest           # oned_cnn or random_forest
+  random_forest:
+    n_estimators: 200
+    max_depth: 10
+  oned_cnn:
+    conv_filters: [32, 64]
+    kernel_sizes: [3, 3]
+    dense_units: 128
+    dropout: 0.5
+    lr: 0.001
+    epochs: 50
+    batch_size: 32
+
+training:
+  targets:
+    - Brix
+    - TA
+    - "Firmness (kg)"
+  group_by:
+    - Experiment
+    - Fruit nr
