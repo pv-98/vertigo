@@ -1,4 +1,4 @@
-# Microwave Spectral Regression Pipeline
+
 
 This repository implements an end-to-end pipeline for predicting fruit quality attributes (Brix, TA, Firmness) from microwave spectral data. It supports flexible preprocessing modes, two model types (Random Forest, 1D CNN).
 
