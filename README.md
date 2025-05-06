@@ -5,7 +5,7 @@ This repository implements an end-to-end pipeline for predicting fruit quality a
 ##  Repository Structure
 
 ```
-damage_detection_pipeline/
+Root/
 ├── config/
 │   └── config.yaml           # All hyperparameters & settings
 ├── data/
