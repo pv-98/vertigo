@@ -53,6 +53,7 @@ def main():
         # no internal CV; train on full train split
         model.fit(X_train, y_train)
         preds = model.predict(X_val)
+        print("Predictions", preds)
         print("Validation metrics:", eval_metrics(y_val, preds))
         os.makedirs('models', exist_ok=True)
         save_pickle(model, 'models/random_forest.pkl')
